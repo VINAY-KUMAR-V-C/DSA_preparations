@@ -1,4 +1,4 @@
-package JAVA;
+package Problems;
 
 public class StepsProblem_1_2{
     public int climbStairs(int n) {
