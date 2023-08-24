@@ -1,6 +1,6 @@
 package Linked_List;
 
-public class ReverseLinkedList {
+public class ReverseSingleLinkedList {
     Node node;
     Node method(Node node){
         //logic 
