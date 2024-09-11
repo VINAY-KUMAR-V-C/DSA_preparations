@@ -19,10 +19,12 @@ def getResult(nums):
     return final
 print(getResult(nums))
 
-# count : +1 +0 -1 -2 -3 -2 -1 +0
+# count : +1 +0 -1 -2 -3 -2 -1 +0  
 # index :  0  1  2  3  4  5  6  7 
 # nums  :  1  0  0  0  0  1  1  1 
 
 # step 1 : get max size where it becomes 0 
 # step 2 : first and last index of count values 1,-1,-2,-3 in the above example 
 #           and max diff of those .
+
+#[-1 -2 -3 -2 -1],[-2 -3 -2],[+0 -1 -2 -3 -2 -1 +0] etc.. will give that in between these values there is equal number of one and zeros
