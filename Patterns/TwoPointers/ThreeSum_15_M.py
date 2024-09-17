@@ -1,4 +1,4 @@
-def threeSum(nums):
+def threeSumBetter(nums):
     length = len(nums)
     res = []
     for i in range(length):
@@ -12,7 +12,7 @@ def threeSum(nums):
             inBetweeenEle.add(nums[j])
     return res
 
-def threeSumBetter(nums):
+def threeSumOptimal(nums):
     nums = sorted(nums)
     length = len(nums)
     i=0
