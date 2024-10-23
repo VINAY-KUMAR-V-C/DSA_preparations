@@ -1,0 +1,5 @@
+For normal case
+    1. sort based on first value
+    2. start merging by comparing the {second value of left} to {first and last value of right} .
+For other case erase to make non overlapping
+    1. sort by end value
