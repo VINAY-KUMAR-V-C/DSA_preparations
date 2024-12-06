@@ -1,0 +1,5 @@
+Post order :
+left + cur vs max
+right + cur vs max
+right +left + cur vs max
+return right+cur vs left+cur vs cur
