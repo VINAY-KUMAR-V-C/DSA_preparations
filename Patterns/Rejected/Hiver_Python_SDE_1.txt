@@ -1,0 +1,35 @@
+Hiver questions: 
+Design a schema for a support ticketing system (e.g., Zendesk). 
+How would you model users, tickets, and interactions? 
+What kind of indexing strategy would you apply for fast querying?
+
+predefined values 
+roles : values(agents,customers)
+status : values(completed,inProgress,notPicked)
+users 
+    userID serial int primary key,
+    mail varchar(100),
+    userName varchar(100),
+    role varchar(100) 
+tickets
+    ticketId serial int primary key,
+    userId int,
+    info varchar(500),
+    createdTime timestamp,
+    foreign key (userId) references users(userID),
+    index index_id1 (ticketId)
+intercation
+    interactionId int primary key,
+    ticketId int,
+    roleUserId int,
+    status,
+    foreign key (ticketId) references tickets(ticketId) ,
+    foreign key (roleUserId) references users(userID),
+    index index_id2 (ticketId)
+
+Write a SQL query to fetch the top 5 customers by ticket volume in the last 30 days.
+
+Select users.userName, count(tickets.ticketId) from tickets
+inner join users on users.userId=tickets.userId 
+where tickets.createdTime >= now()-30
+group by tickets.ticketId limit 5
